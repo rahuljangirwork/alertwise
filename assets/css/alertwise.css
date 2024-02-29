@@ -1,0 +1,377 @@
+/* ------------------------- Styleguide aarjaycreation -------------------------------------------------- */
+
+/* ------------------------- Fonts -------------------------------------------------- */
+@font-face {
+    font-family: 'Rahul-alertwise';
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: 450;
+    font-style: normal;
+    font-display: auto;
+}
+
+/* ------------------------- Colors -------------------------------------------------- */
+
+:root {
+    --body-font: 'Rahul-alertwise', sans-serif;
+
+
+    --alert-error: #EF665B;
+    --alert-success: #84D65A;
+    --alert-warning: #F7C752;
+    --black-color: #1C1D20;
+    --white-color: #FFF;
+    /* border color  */
+    --color-border: rgba(28, 29, 32, 0.175);
+
+
+    /*========== animation ==========*/
+    --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+    --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+    --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
+    --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
+
+
+    /*========== border redius ==========*/
+    --btn-height: 2.2em;
+    --border-radius: calc(var(--btn-height) * 0.5);
+    --border-radius-large: calc(var(--btn-height) * 0.75);
+
+
+    /*========== text six=ze ==========*/
+    --big-font-size: clamp(1.2em, 1.3vw, 2.1em);
+    --normal-font-size: clamp(0.6em, 1.3vw, 1.1875em);
+    --small-font-size: clamp(.7em, 1.3vw, .8em);
+    --smaller-font-size: clamp(.6em, 1.3vw, .7em);
+    --tiny-font-size: clamp(.5em, 1.3vw, .6em);
+
+
+    /*========== z index ==========*/
+    --z-modal: 1000;
+}
+
+
+.alertwise-container {
+    position: fixed;
+    top: 0.5em;
+    right: clamp(0.6em, 1.5vw, 1.1875em);
+    margin-left: 1em;
+    z-index: var(--z-modal);
+}
+
+.alertwise {
+    position: relative;
+    font-family: var(--body-font);
+    padding: clamp(0.6em, 1.5vw, 1.1875em);
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 5px -3px var(--black-color);
+    opacity: 0;
+    animation: fadeIn .3s forwards;
+    transition: var(--animation-fast);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0.05;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+
+    15% {
+        opacity: 0.15;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    35% {
+        opacity: 0.35;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    45% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    55% {
+        opacity: 0.55;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    65% {
+        opacity: 0.65;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    85% {
+        opacity: 0.85;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    95% {
+        opacity: 0.95;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0.95;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    15% {
+        opacity: 0.85;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    25% {
+        opacity: 0.75;
+    }
+
+    30% {
+        opacity: 0.7;
+    }
+
+    35% {
+        opacity: 0.65;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    45% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    55% {
+        opacity: 0.45;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+
+    65% {
+        opacity: 0.35;
+    }
+
+    70% {
+        opacity: 0.3;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    80% {
+        opacity: 0.2;
+    }
+
+    85% {
+        opacity: 0.15;
+    }
+
+    90% {
+        opacity: 0.1;
+    }
+
+    95% {
+        opacity: 0.05;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.alertwise__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.alertwise__progress-bar {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    animation: none;
+}
+
+.alertwise__progress-bar.animate {
+    animation: progress-animation 3s linear reverse;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+.success {
+    background: var(--alert-success);
+}
+
+.warning {
+    background: var(--alert-warning);
+}
+
+.error {
+    background: var(--alert-error);
+}
+
+.success__icon,
+.warning__icon,
+.error__icon {
+    display: grid;
+    place-items: center;
+}
+
+.success__close,
+.warning__close,
+.error__close {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    right: clamp(0.5em, 1.5vw, .875em);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.success__icon svg,
+.warning__icon svg,
+.error__icon svg,
+.success__close svg,
+.warning__close svg,
+.error__close svg {
+
+    height: clamp(1.2em, 1.5vw, 1.3875em);
+    width: clamp(1.2em, 1.5vw, 1.3875em);
+}
+
+.success__close svg,
+.warning__close svg,
+.error__close svg {
+    padding: clamp(0.01875em, 1.5vw, .1875em);
+    border-radius: 0.2em;
+    box-shadow: 0.1em 0.1em 1em 0.2em var(--color-border);
+    height: clamp(1em, 1.5vw, 1.1875em);
+    width: clamp(1em, 1.5vw, 1.1875em);
+}
+
+.success__icon path {
+    fill: var(--black-color);
+}
+
+.warning__icon path {
+    fill: var(--black-color);
+}
+
+.error__icon path {
+    fill: var(--white-color);
+}
+
+.success__title {
+    margin-right: clamp(1.5em, 1.5vw, 2.1875em);
+    margin-left: clamp(0.2em, 1.3vw, 0.3875em);
+    font-weight: 500;
+    font-size: var(--normal-font-size);
+    color: var(--black-color);
+}
+
+.warning__title {
+    margin-right: clamp(1.5em, 1.5vw, 2.1875em);
+    margin-left: clamp(0.2em, 1.3vw, 0.3875em);
+    font-weight: 500;
+    font-size: var(--normal-font-size);
+    color: var(--black-color);
+}
+
+.error__title {
+    margin-right: clamp(1.5em, 1.5vw, 2.1875em);
+    margin-left: clamp(0.2em, 1.3vw, 0.3875em);
+    font-weight: 500;
+    font-size: var(--normal-font-size);
+    color: var(--white-color);
+    max-width: 320px;
+}
+
+.success__close path {
+    fill: var(--black-color);
+}
+
+.warning__close path {
+    fill: var(--black-color);
+}
+
+.error__close path {
+    fill: var(--white-color);
+}

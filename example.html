@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="AlertWise: A lightweight JavaScript library for customizable and non-blocking notifications. Display multiple stacked notifications with ease. Supports success, warning, and error notifications. Ensure seamless notification display with AlertWise, fully responsive for all devices.">
+  <meta name="keywords"
+    content="AlertWise, Alert, sweetalert2,toastify-js,toast js, JavaScript library, notifications, responsive design">
+  <meta name="author" content="aarjaycreation">
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+  <!--=============== ALERTWISE CSS ===============-->
+  <link rel="stylesheet" href="assets/css/alertwise.css">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+
+  <title>alertwise - aarjaycreation</title>
+</head>
+
+<body>
+  <!--====================  ALERTWISE  ====================-->
+  <div class="alertwise-container" id="alertwise-container"></div>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <button class="github_btn" id="Alertwise_REPO" title="alertwise Github repository">Github</button>
+      <label class="switch" title="toggleTheme">
+        <input checked class="toggle" type="checkbox">
+        <span class="slider"></span>
+        <span class="card-side"></span>
+      </label>
+    </nav>
+  </header>
+
+
+
+  <main class="main">
+    <div class="mobile-tap-area">
+      <div class="tap-indication" title="tap to try">Tap to try</div>
+    </div>
+    <!--==================== HOME ====================-->
+    <section class="home container" id="home">
+      <h1>Alertwise.js</h1>
+
+      <div class="button__Container">
+        <button class="button" id="randomButton" title="try it!">Try</button>
+
+        <button class="button" id="Docs" title="go to document">Docs</button>
+      </div>
+
+    </section>
+
+    <section class="code container" id="code">
+      <div class="code-editor">
+        <div class="code-editor-header">
+          <span class="title">Usage</span>
+          <button class="copy">
+            <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="tooltip"></span>
+            <span>
+              <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0"
+                height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" class="clipboard">
+                <g>
+                  <path fill="currentColor"
+                    d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
+                  </path>
+                </g>
+              </svg>
+              <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0"
+                height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                <g>
+                  <path data-original="#000000" fill="currentColor"
+                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
+                  </path>
+                </g>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="editor-content">
+          <code class="code">
+
+                <p class="property">
+                  <!-- <span class="color-gray">// Call showMessage function with appropriate parameters </span> -->
+                  <br>
+                  <span class="color-text">
+                  &lt;<span class="color-red">script</span>&gt; 
+                  <br>
+                  <span class="color-secondary">function </span>
+                  <span class="color-primary">showMessage</span>
+                  <span class="color-warning">&lpar;</span>message, type<span class="color-warning">&rpar; <br> {</span>
+                    <br>
+                    <span class="color-primary">showalertwise</span> 
+                    <span class="color-secondary">(</span>message, type<span class="color-secondary">)</span>;
+                    <br>
+                    <span class="color-warning">}</span>
+                  <br> <br>
+    
+                  <span class="color-gray">// Call showMessage function with appropriate parameters</span>
+                <br>
+                  <span class="color-primary">showMessage</span> <span class="color-warning">(</span><span class="color-success">'This is a success message', 'success'</span><span class="color-warning">)</span>;
+                 <br> &lt;<span class="color-red">script</span>&gt; </span>
+                </p>
+              <br>
+              </code>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer section">
+
+
+
+
+    <span class="footer__copy">&#169; <a href="https://aarjaycreation.com/" target="_blank"
+        title="the maker ">aarjaycreation</a> . All rigths reserved</span>
+
+
+  </footer>
+
+  <!--=============== SCROLL UP ===============-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <svg class="scrollup__icon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+      </path>
+    </svg>
+  </a>
+
+  <!--=============== SCROLL REVEAL ===============-->
+  <script src="assets/js/scrollreveal.min.js"></script>
+
+  <!--=============== ALERTWISE JS ===============-->
+  <script src="assets/js/alertwise.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
