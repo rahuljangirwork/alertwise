@@ -2,6 +2,20 @@
 
 AlertWise is a lightweight and customizable notification library for displaying multiple stacked notifications in web applications. It offers flexibility, ease of use, and the ability to handle notifications without blocking the execution thread. With customizable options and support for various notification types, AlertWise empowers developers to create engaging user experiences effortlessly.
 
+### <a href="https://alertwise-aarjaycreation.web.app" title="alertwise demo web">demo</a>
+
+## AlertWise Screen Capture 
+
+<details>
+  <summary><strong>View Capture</strong></summary>
+  <a href="https://alertwise-aarjaycreation.web.app"><img src="assets/images/alertwise-dark.png" alt="alertwise-dark-capture-image" /></a>
+
+<br>
+
+   <a href="https://alertwise-aarjaycreation.web.app"><img src="assets/images/alertwise-light.png" 
+   alt="alertwise-light-capture-image" /></a>
+</details>
+
 ## Features
 
 - **Multiple Stacked Notifications**: Display multiple notifications stacked on top of each other.
