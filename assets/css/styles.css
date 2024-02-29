@@ -190,6 +190,13 @@ button {
   /*For animation*/
 }
 
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
 /*=============== HEADER ===============*/
 .header {
   width: 100%;
@@ -252,34 +259,24 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-
-  .mobile-tap-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: var(--z-fixed);
-  }
-
   .tap-indication {
-    background-color: var(--container-color);
-    border-radius: calc(var(--border-radius) / 2);
-    padding: 0.2em;
     opacity: 1;
     text-align: center;
-    width: calc(var(--btn-height) * 3);
     color: var(--title-color);
     position: fixed;
-    bottom: 1%;
+    bottom: 2%;
+    left: 5em;
     font-size: var(--tiny-font-size);
     animation: bounceTap 1s infinite alternate;
 
     -webkit-animation: bounceTap .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
     -moz-animation: bounceTap .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
     animation: bounceTap .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+  }
+
+  .tap-indication .button {
+    height: 4em;
+    border-radius: var(--border-radius-large);
   }
 
   @keyframes bounceTap {

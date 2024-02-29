@@ -101,7 +101,7 @@ document.getElementById('randomButton').addEventListener('click', function () {
 /*=============== mobile-tap-area ===============*/
 
 
-document.querySelector('.mobile-tap-area').addEventListener('click', function () {
+document.getElementById('randomButton2').addEventListener('click', function () {
   document.getElementById('randomButton').click();
 })
 
